@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid brown">
+  Your browser
+</canvas>
+</body>
+<script>
+    // phương thức creatLinearGradient(),addColorStop();
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  // Creat gradient
+  let grd = ctx.createLinearGradient(0,0,200,0);
+  grd.addColorStop(0,"red");
+  grd.addColorStop(1,"white");
+  // Fill width garent
+  ctx.fillStyle = grd;
+  ctx.fillRect(10,10,150,80);
+</script>
+</html>

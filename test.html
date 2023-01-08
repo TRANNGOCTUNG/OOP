@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid red"></canvas>
+</body>
+<script>
+  class Rectangel{
+    constructor(x,y,width,height,color) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.color = color;
+    }
+    getX(){
+      return this.x;
+    }
+    getY(){
+      return this.y;
+    }
+    getWidth(){
+      return this.width;
+    }
+    getHeight(){
+      return this.height;
+    }
+    getColor(){
+      return this.color;
+    }
+    setX(value){
+      this.x = value;
+    }
+    setY(value){
+      this.y = value;
+    }
+    setWidth(value){
+      this.width = value;
+    }
+    setHeight(value){
+      this.color = value;
+    }
+    setColor(value){
+      this.color = value
+    }
+  }
+ let my = new Rectangel(10,10,100,100,"black");
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.fillStyle = my.color;
+  ctx.fillRect(my.x, my.y, my.getWidth(), my.getHeight())
+</script>
+</html>

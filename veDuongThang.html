@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid black">
+  Your browser does not support the HTML5 canvas tag.
+</canvas>
+</body>
+<script>
+  // vẽ đường thằng lineTo()
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.moveTo(200,100);
+  ctx.stroke();
+
+  // vẽ đường tròn arc()
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(90,50,40,0,2*Math.PI);
+  ctx.stroke();
+
+  // vẽ chữ filltext()
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.fillText("Hello Word",10,50)
+
+</script>
+</html>
